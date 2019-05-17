@@ -18,7 +18,7 @@ def builder(name, target_space):
     """ 用setuptools打包 """
     os.chdir(target_space)  # 切换工作路径
     generate_setup(target_space, project=name, version='1.5')
-    # 在当前工作路径执行打包命令
+    # 在目标路径执行打包命令
     execute = subprocess.run([sys.executable, 'setup.py', 'bdist_egg', '-d', target_space],
                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if not execute.returncode:
