@@ -1,3 +1,4 @@
+"""项目打包"""
 import os
 import sys
 import logging
